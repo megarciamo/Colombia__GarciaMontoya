@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: "Nunito", sans-serif;
+}
+
+header {
+  color: white;
+  background-color: blue;
+  padding: 20px 10px 20px 10px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+header a:hover,
+.card:hover {
+  box-shadow: 5px 5px 5px black;
+}
+
+.titulo,
+ul {
+  display: inline;
+}
+
+.navegador {
+  float: right;
+  margin-top: 10px;
+}
+
+li {
+  float: left;
+  list-style: none;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.intro {
+  background-image: url(./img/Colombia.PNG);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: silver;
+  background-size: cover;
+  height: 500px;
+  position: relative;
+}
+
+.intro__box {
+  border: black 3px solid;
+  text-align: center;
+  padding: 20px;
+  width: 30%;
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  color: black;
+  font-weight: bold;
+  box-shadow: 5px 5px 5px black;
+}
+
+.intro__box p {
+  font-size: 18px;
+}
+
+.piedepag {
+  background-color: blue;
+  padding: 25px;
+  text-align: right;
+  color: white;
+}
+
+.cards {
+  background-color: lightgray;
+}
+
+.card {
+  border: 3px black solid;
+  width: 20%;
+  height: 300px;
+  display: inline-block;
+  margin: 20px;
+  padding: 5px;
+  border-radius: 25px;
+}
+
+.card__imagen {
+  width: 200px;
+  height: 200px;
+  margin: 35px;
+}
+
+.card__titulo {
+  margin: 20px 20px 0px 30px;
+  text-align: center;
+}
+
+#frame__videoferias {
+  background-color: lightgrey;
+}
+
+#videoferias {
+  width: 560px;
+  height: 315px;
+  margin: 0 auto;
+  display: -webkit-box;
+  padding: 20px;
+}
+
+#contacto {
+  background-color: lightgray;
+}
+
+#formulario {
+  background-color: gray;
+  border: 3px solid black;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 50px;
+  margin-left: 150px;
+  padding: 50px;
+}
+
+#map {
+  float: right;
+  margin: 61px;
+  margin-right: 100px;
+}
