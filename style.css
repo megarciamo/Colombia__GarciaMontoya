@@ -1,16 +1,80 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 html {
   font-family: "Nunito", sans-serif;
 }
 
+.container {
+  display: grid;
+  grid-template-rows: 1fr 15fr 1fr;
+  grid-template-areas: 
+  "header"
+  "intro"
+  "footer";
+}
+
+.container__card {
+  display: grid;
+  grid-template-rows: 1fr 15fr 1fr;
+  grid-template-areas: 
+  "header"
+  "cards"
+  "footer";
+}
+
+.container__card__video {
+  display: grid;
+  grid-template-rows: 1fr 10fr 15fr 1fr;
+  grid-template-areas: 
+  "header"
+  "video"
+  "cards"
+  "footer";
+}
+
+.container__contacto {
+  display: grid;
+  grid-template-rows: 1fr 5fr 1fr;
+    grid-template-areas: 
+  "header"
+  "contacto"
+  "footer";
+}
+
+header {
+ grid-area: header;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+.titulo {
+  grid-area: titulo;
+}
+.navegador {
+  grid-area: navegador;
+}
+.intro {
+  grid-area: intro;
+}
+
+.cards {
+  grid-area: cards;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  }
+
+.piedepag { 
+  grid-area: footer;
+}
+
 header {
   color: white;
   background-color: blue;
-  padding: 20px 10px 20px 10px;
 }
 
 header a {
@@ -25,21 +89,15 @@ header a:hover,
   box-shadow: 5px 5px 5px black;
 }
 
-.titulo,
-ul {
-  display: inline;
-}
-
-.navegador {
-  float: right;
-  margin-top: 10px;
-}
+ ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+ }
 
 li {
-  float: left;
   list-style: none;
-  text-align: center;
-  margin-right: 10px;
+  margin: 10px;
 }
 
 .intro {
@@ -48,18 +106,16 @@ li {
   background-position: center;
   background-color: silver;
   background-size: cover;
-  height: 500px;
-  position: relative;
-}
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
 
 .intro__box {
   border: black 3px solid;
   text-align: center;
-  padding: 20px;
-  width: 30%;
-  position: absolute;
-  top: 30%;
-  left: 35%;
+  width: 40%;
   color: black;
   font-weight: bold;
   box-shadow: 5px 5px 5px black;
@@ -71,9 +127,9 @@ li {
 
 .piedepag {
   background-color: blue;
-  padding: 25px;
   text-align: right;
   color: white;
+  
 }
 
 .cards {
@@ -84,51 +140,138 @@ li {
   border: 3px black solid;
   width: 20%;
   height: 300px;
-  display: inline-block;
-  margin: 20px;
-  padding: 5px;
   border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1%;
 }
 
 .card__imagen {
-  width: 200px;
-  height: 200px;
-  margin: 35px;
+  width: -webkit-fill-available;
+  margin: 4%;
+ 
 }
 
 .card__titulo {
-  margin: 20px 20px 0px 30px;
+  margin: 10px;
   text-align: center;
-}
+  }
 
 #frame__videoferias {
   background-color: lightgrey;
+  grid-area: video;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #videoferias {
   width: 560px;
   height: 315px;
-  margin: 0 auto;
-  display: -webkit-box;
-  padding: 20px;
-}
+  }
 
 #contacto {
   background-color: lightgray;
+  grid-area: contacto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
 }
 
 #formulario {
   background-color: gray;
   border: 3px solid black;
   border-radius: 10px;
-  display: inline-block;
-  margin: 50px;
-  margin-left: 150px;
-  padding: 50px;
+  margin: 50px 0;
+  padding: 18px;
+ }
+
+ @media (max-width:1100px){
+  
+  #contacto {
+  flex-direction: column;
+  
+  }
+
 }
 
-#map {
-  float: right;
-  margin: 61px;
-  margin-right: 100px;
+ @media (max-width:630px){
+  
+  .intro__box {
+    width: 70%;
+  }
+
+  .cards{
+    justify-content: space-evenly;
+  }
+
+  .card {
+    width: 250px;
 }
+
+#videoferias {
+  width: 360px;
+  height: 315px;
+  }
+
+  .container__card__video {
+    grid-template-rows: 1fr 5fr 15fr 1fr;
+
+  }
+
+.mapa{
+  width: 340px;
+  height: 300px;
+}
+
+}
+
+@media (max-width:375px) {
+
+  .container {
+    grid-template-rows: 1fr 5fr 1fr;
+  }
+
+  .cards {
+    justify-content: center;
+    }
+
+  .card {
+    width: 75%;
+}
+
+.card__imagen {
+  width: inherit;
+ 
+}
+
+#videoferias {
+  width: 260px;
+  height: 315px;
+  }
+
+  .container__card__video {
+    grid-template-rows: 1fr 1fr 15fr 1fr;
+
+  }
+
+.piedepag{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mapa{
+  width: 280px;
+  height: 300px;
+}
+
+}
+
+
+
+
+
