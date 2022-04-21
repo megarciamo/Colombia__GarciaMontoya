@@ -8,37 +8,37 @@ html {
   font-family: "Nunito", sans-serif;
 }
 
-.container {
+.containerMG {
   display: grid;
-  grid-template-rows: 1fr 15fr 1fr;
+  grid-template-rows: 1fr 6.5fr 1fr;
   grid-template-areas: 
   "header"
   "intro"
   "footer";
 }
 
-.container__card {
+/* .container__card {
   display: grid;
-  grid-template-rows: 1fr 15fr 1fr;
+  grid-template-rows: 1fr 6.5fr 1fr;
   grid-template-areas: 
   "header"
   "cards"
-  "footer";
-}
+  "footer"; 
+}*/
 
-.container__card__video {
+/* .container__card__video {
   display: grid;
-  grid-template-rows: 1fr 10fr 15fr 1fr;
+  grid-template-rows: 1fr 4fr 6.5fr 1fr;
   grid-template-areas: 
   "header"
   "video"
   "cards"
-  "footer";
-}
+  "footer"; 
+}*/
 
 .container__contacto {
   display: grid;
-  grid-template-rows: 1fr 15fr 1fr;
+  grid-template-rows: 1fr 6.5 1fr;
     grid-template-areas: 
   "header"
   "contacto"
@@ -50,15 +50,6 @@ header {
  display: flex;
  justify-content: space-between;
  align-items: center;
-}
-.titulo {
-  grid-area: titulo;
-}
-.navegador {
-  grid-area: navegador;
-}
-.intro {
-  grid-area: intro;
 }
 
 .cards {
@@ -84,7 +75,7 @@ header a {
   font-size: 16px;
 }
 
-header a:hover, .card:hover {
+header a:hover, .cardmg:hover {
   box-shadow: 5px 5px 5px black;
   transform: scale(1.05);
   cursor: pointer;
@@ -138,7 +129,7 @@ li {
   background-color: lightgray;
 }
 
-.card {
+.cardmg {
   border: 3px black solid;
   width: 20%;
   height: 300px;
@@ -210,7 +201,7 @@ li {
     justify-content: space-evenly;
   }
 
-  .card {
+  .cardmg {
     width: 250px;
 }
 
@@ -237,7 +228,7 @@ li {
 
 @media (max-width:375px) {
 
-  .container {
+  .containerMG {
     grid-template-rows: 1fr 5fr 1fr;
   }
 
@@ -245,7 +236,7 @@ li {
     justify-content: center;
     }
 
-  .card {
+  .cardmg {
     width: 75%;
 }
 
