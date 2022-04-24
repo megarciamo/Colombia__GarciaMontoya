@@ -17,24 +17,18 @@ html {
   "footer";
 }
 
-/* .container__card {
-  display: grid;
-  grid-template-rows: 1fr 6.5fr 1fr;
-  grid-template-areas: 
-  "header"
-  "cards"
-  "footer"; 
-}*/
+.card-title {
+  text-align: center;
+  text-transform: uppercase;
+}
 
-/* .container__card__video {
-  display: grid;
-  grid-template-rows: 1fr 4fr 6.5fr 1fr;
-  grid-template-areas: 
-  "header"
-  "video"
-  "cards"
-  "footer"; 
-}*/
+.card-img-top {
+  height: -webkit-fill-available;
+}
+
+.g-4 {
+  padding: 20px
+}
 
 .container__contacto {
   display: grid;
@@ -46,7 +40,6 @@ html {
 }
 
 header {
- grid-area: header;
  display: flex;
  justify-content: space-between;
  align-items: center;
@@ -60,7 +53,7 @@ header {
   }
 
 .piedepag { 
-  grid-area: footer;
+  grid-area: footer; 
 }
 
 header {
@@ -75,7 +68,7 @@ header a {
   font-size: 16px;
 }
 
-header a:hover, .cardmg:hover {
+header a:hover, .card:hover {
   box-shadow: 5px 5px 5px black;
   transform: scale(1.05);
   cursor: pointer;
@@ -108,7 +101,7 @@ li {
 .intro__box {
   border: black 3px solid;
   text-align: center;
-  width: 40%;
+  width: 33%;
   color: black;
   font-weight: bold;
   box-shadow: 5px 5px 5px black;
@@ -122,35 +115,13 @@ li {
   background-color: blue;
   text-align: right;
   color: white;
-  
+  height: 90px;  
 }
 
 .cards {
   background-color: lightgray;
 }
 
-.cardmg {
-  border: 3px black solid;
-  width: 20%;
-  height: 300px;
-  border-radius: 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 1%;
-}
-
-.card__imagen {
-  width: -webkit-fill-available;
-  margin: 4%;
- 
-}
-
-.card__titulo {
-  margin: 10px;
-  text-align: center;
-  }
 
 #frame__videoferias {
   background-color: lightgrey;
@@ -163,6 +134,7 @@ li {
 #videoferias {
   width: 560px;
   height: 315px;
+  margin: 20px;
   }
 
 #contacto {
@@ -186,33 +158,24 @@ li {
   
   #contacto {
   flex-direction: column;
-  
-  }
+   }
 
 }
 
  @media (max-width:630px){
   
   .intro__box {
-    width: 70%;
+    width: 38%;
   }
 
-  .cards{
-    justify-content: space-evenly;
-  }
-
-  .cardmg {
-    width: 250px;
-}
 
 #videoferias {
   width: 360px;
   height: 315px;
   }
 
-  .container__card__video {
-    grid-template-rows: 1fr 5fr 15fr 1fr;
-
+.container__card__video {
+  grid-template-rows: 1fr 5fr 15fr 1fr;
   }
 
 .mapa{
@@ -224,41 +187,36 @@ li {
   grid-template-rows: 1fr 5fr 1fr;
 }
 
+
+.containerMG {
+  grid-template-rows: 1fr 5fr 1fr;
+}
+
 }
 
 @media (max-width:375px) {
 
+  .intro__box {
+    width: 70%;
+  }
   .containerMG {
     grid-template-rows: 1fr 5fr 1fr;
   }
-
-  .cards {
-    justify-content: center;
-    }
-
-  .cardmg {
-    width: 75%;
-}
-
-.card__imagen {
-  width: inherit;
- 
-}
 
 #videoferias {
   width: 260px;
   height: 315px;
   }
 
-  .container__card__video {
-    grid-template-rows: 1fr 1fr 15fr 1fr;
+.container__card__video {
+  grid-template-rows: 1fr 1fr 15fr 1fr;
 
   }
 
 .piedepag{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .mapa{
@@ -272,6 +230,8 @@ li {
 
 
 }
+
+/* INICIO ANIMACIONES */
 
 .rotate-scale-up {
 	-webkit-animation: rotate-scale-up 2s linear both;
@@ -296,8 +256,8 @@ li {
             transform: scale(1) rotateZ(0);
   }
   50% {
-    -webkit-transform: scale(1.5) rotateZ(180deg);
-            transform: scale(1.5) rotateZ(180deg);
+    -webkit-transform: scale(1) rotateZ(180deg);
+            transform: scale(1) rotateZ(180deg);
   }
   100% {
     -webkit-transform: scale(1) rotateZ(360deg);
@@ -310,8 +270,8 @@ li {
             transform: scale(1) rotateZ(0);
   }
   50% {
-    -webkit-transform: scale(1.5) rotateZ(180deg);
-            transform: scale(1.5) rotateZ(180deg);
+    -webkit-transform: scale(1) rotateZ(180deg);
+            transform: scale(1) rotateZ(180deg);
   }
   100% {
     -webkit-transform: scale(1) rotateZ(360deg);
@@ -363,7 +323,7 @@ li {
   }
 }
 
-
+/* FIN ANIMACIONES */
 
 
 
