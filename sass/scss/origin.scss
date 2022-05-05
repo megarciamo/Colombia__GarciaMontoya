@@ -12,6 +12,11 @@
 
       }
 
+      @mixin alineacion($dis, $aling) { 
+        display: $dis;
+        justify-content: $aling;
+      }
+
     .containerMG {
         display: grid;
         grid-template-rows: 1fr 6.5fr 1fr;
@@ -21,33 +26,39 @@
         "footer";
 
         header {
-            display: flex;
-            justify-content: space-between;
+            @include alineacion(flex, space-between);
             align-items: center;
             color: white;
             background-color: blue;
 
+            .navbar-brand {
+              color: white;
+              text-decoration: none;
+              text-transform: uppercase;
+              font-size: 20px;
+       
+
+              &:hover {
+                  box-shadow: 5px 5px 5px black;
+                  transform: scale(1.05);
+                  cursor: pointer;
+                  
+                }
+            }
+
             ul {
-                display: flex;
-                flex-flow: row wrap;
-                justify-content: flex-end;
+              @include alineacion(flex, flex-end);
+              flex-flow: row wrap;
+             
 
                 li {
                     list-style: none;
                     margin: 10px;
 
                     a {
-                        color: white;
-                        text-decoration: none;
-                        text-transform: uppercase;
-                        font-size: 16px;
-        
-                        & :hover {
-                            box-shadow: 5px 5px 5px black;
-                            transform: scale(1.05);
-                            cursor: pointer;
-                            
-                          }
+                      @extend .navbar-brand;
+                      font-size: 16px;
+                      }    
 
                   }
 
@@ -66,9 +77,8 @@
             background-color: silver;
             background-size: cover;
             height: 100%;
-            display: flex;
-            justify-content: center;
             align-items: center;
+            @include alineacion(flex, center);
 
             .intro__box {
                 border: black 3px solid;
@@ -97,9 +107,13 @@
 
      
 
+       $pantallas: (
+         tablet: 630px,
+         Celular: 375px 
+       );
 
   
-   @media (max-width:630px){
+   @media (max-width: map-get($pantallas, tablet)){
   
     .intro__box {
       width: 38%;
@@ -111,7 +125,7 @@
     
     }
   
-  @media (max-width:375px) {
+  @media (max-width: map-get($pantallas, Celular)) {
   
     .intro__box {
       width: 70%;
@@ -129,9 +143,11 @@
   }
   
    
-   }
+   
 
    @import "animaciones"
+
+   //Hola
 
 
 

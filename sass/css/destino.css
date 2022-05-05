@@ -20,38 +20,42 @@ html {
   color: white;
   background-color: blue;
 }
+.containerMG header .navbar-brand, .containerMG header ul li a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.containerMG header .navbar-brand:hover, .containerMG header ul li a:hover {
+  box-shadow: 5px 5px 5px black;
+  transform: scale(1.05);
+  cursor: pointer;
+}
 .containerMG header ul {
   display: flex;
-  flex-flow: row wrap;
   justify-content: flex-end;
+  flex-flow: row wrap;
 }
 .containerMG header ul li {
   list-style: none;
   margin: 10px;
 }
 .containerMG header ul li a {
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
   font-size: 16px;
 }
-.containerMG header ul li a :hover {
-  box-shadow: 5px 5px 5px black;
-  transform: scale(1.05);
-  cursor: pointer;
-}
-.containerMG .intro {
+
+.intro {
   background-image: url(../../img/Colombia.PNG);
   background-repeat: no-repeat;
   background-position: center;
   background-color: silver;
   background-size: cover;
   height: 100%;
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
-.containerMG .intro .intro__box {
+.intro .intro__box {
   border: black 3px solid;
   text-align: center;
   width: 33%;
@@ -59,38 +63,42 @@ html {
   font-weight: bold;
   box-shadow: 5px 5px 5px black;
 }
-.containerMG .intro .intro__box p {
+.intro .intro__box p {
   font-size: 18px;
 }
-.containerMG .piedepag {
+
+.piedepag {
   grid-area: footer;
   background-color: blue;
   text-align: right;
   color: white;
   height: 90px;
 }
+
 @media (max-width: 630px) {
-  .containerMG .intro__box {
+  .intro__box {
     width: 38%;
   }
-  .containerMG .containerMG {
+
+  .containerMG {
     grid-template-rows: 1fr 5fr 1fr;
   }
 }
 @media (max-width: 375px) {
-  .containerMG .intro__box {
+  .intro__box {
     width: 70%;
   }
-  .containerMG .containerMG {
+
+  .containerMG {
     grid-template-rows: 1fr 5fr 1fr;
   }
-  .containerMG .piedepag {
+
+  .piedepag {
     display: flex;
     align-items: center;
     justify-content: center;
   }
 }
-
 /* INICIO ANIMACIONES */
 .rotate-scale-up {
   -webkit-animation: rotate-scale-up 2s linear both;

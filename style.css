@@ -86,30 +86,6 @@ li {
   margin: 10px;
 }
 
-.intro {
-  background-image: url(./img/Colombia.PNG);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: silver;
-  background-size: cover;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
- }
-
-.intro__box {
-  border: black 3px solid;
-  text-align: center;
-  width: 33%;
-  color: black;
-  font-weight: bold;
-  box-shadow: 5px 5px 5px black;
-}
-
-.intro__box p {
-  font-size: 18px;
-}
 
 .piedepag {
   background-color: blue;
